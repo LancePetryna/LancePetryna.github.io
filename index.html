@@ -6,6 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lance Petryna's Webpage</title>
     <link rel="icon" type="image/x-icon" href="images/favicon.png">
+    <link rel="stylesheet" href="src/style.css">
+
+    <style>
+        ul, ol {
+                color: rgb(113, 113, 242);
+                font-family: sans-serif;
+        }
+    </style>
+
 </head>
 <body>
 
@@ -19,11 +28,12 @@
         </tr>
     </table>
 
-    <h1>Lance Petryna</h1>
+    <h1 style="color: rgb(133, 133, 242); font-family: sans-serif;">Lance Petryna</h1>
     <img src="images/idPicture.jpeg" alt="picture" width="100" height="100">
     <hr>
 
-    <h2><b>Who am I?</b></h2>
+<div class="professional">  
+    <h2 class="header"><b>Who am I?</b></h2>
 <pre>
 Hello, my name is Lance Petryna.
 I am 21 years old and I am currently enrolled in the Game Development program at St.Lawrence College.
@@ -31,8 +41,8 @@ This website is a work in progress.
 </pre>
 
     <br>
-    <h2 id="Laptop">Laptop Specs</h2>
-    <table>
+    <h2 id="Laptop" class="header">Laptop Specs</h2>
+    <table id="specTable">
         <tr>
             <th colspan="2">Type</th>
             <th>Specs</th>
@@ -68,9 +78,11 @@ This website is a work in progress.
             <td>NVME SSD 500 GB</td>
         </tr>
     </table>
+</div>
 
+<div class="personal">
     <br>
-    <h2 id="hobbies">Hobbies</h2>
+    <h2 id="hobbies" class="header">Hobbies</h2>
     <ul>
         <li>Reading</li>
         <li>Playing videogames</li>
@@ -78,7 +90,7 @@ This website is a work in progress.
     </ul>
     
     <br>
-    <h2 id="Games">Games I Play Often</h2>
+    <h2 id="Games" class="header">Games I Play Often</h2>
     <ol>
         <li>Minecraft</li>
         <li>DaggerFall</li>
@@ -89,7 +101,7 @@ This website is a work in progress.
     </ol>
 
     <br>
-    <h2 id="john">John Romero</h2>
+    <h2 id="john" class="header romero">John Romero</h2>
     <img src="images/john-romero.jpg" alt="john-romero" height="420" width="800" usemap="#mymap">
         <map name="mymap">
             <area shape="rect" coords="445,16,625,250" href="https://rome.ro/" target="_blank" title="romero's site" alt="john-romero">
@@ -103,7 +115,7 @@ This website is a work in progress.
     </blockquote>
 
     <br>
-    <h2 id="Sites">Sites That I Like</h2>
+    <h2 id="Sites" class="header">Sites That I Like</h2>
     <dl>
         <dt><a href="https://www.traditionalcatholic.co/free-catholicbooks/" target="_blank">traditionalcatholic.co</a></dt>
         <dd>- A website that lists old catholic books that are avaliable for free download.</dd>
@@ -118,5 +130,7 @@ This website is a work in progress.
     <br>
     <!-- This is a relative link-->
     <a href="portfolio.html">My portfolio page</a>
+</div>
+
 </body>
 </html>
