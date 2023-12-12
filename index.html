@@ -9,35 +9,35 @@
     <link rel="stylesheet" href="src/style.css">
 
     <style>
+        body{
+            text-align: center;
+            background-color: lightslategray;
+        }
         ul, ol {
                 color: rgb(113, 113, 242);
                 font-family: sans-serif;
+        }
+        #specTable{
+            margin-left: auto;
+            margin-right: auto;
         }
     </style>
 
 </head>
 <body>
-
-    <table>
-        <tr>
-            <th style="border: 1px black solid;"><a href="#Laptop">Laptop</a></th>
-            <th style="border: 1px black solid;"><a href="#hobbies">Hobbies</a></th>
-            <th style="border: 1px black solid;"><a href="#Games">Games</a></th>
-            <th style="border: 1px black solid;"><a href="#john">John Romero</a></th>
-            <th style="border: 1px black solid;"><a href="#Sites">Sites</a></th>
-        </tr>
-    </table>
-
-    <h1 style="color: rgb(133, 133, 242); font-family: sans-serif;">Lance Petryna</h1>
-    <img src="images/idPicture.jpeg" alt="picture" width="100" height="100">
+    <h1 style="font-family: sans-serif;">Lance Petryna</h1>
+    <p style="color: black;"><b>Page Bookmarks: </b><a href="#Laptop">Laptop</a> | <a href="#hobbies">Hobbies</a> | <a href="#Games">Games</a> | <a href="#john">John Romero</a> | <a href="#Sites">Sites</a></p>
+    <p style="color: black;"><b>Quick link to portfolio: </b><a href="portfolio.html">Portfolio</a></p>
     <hr>
+
+    <img src="images/idPicture.jpeg" alt="picture" width="200" height="200">
 
 <div class="professional">  
     <h2 class="header"><b>Who am I?</b></h2>
-<pre>
+<pre style="color: black;">
 Hello, my name is Lance Petryna.
-I am 21 years old and I am currently enrolled in the Game Development program at St.Lawrence College.
-This website is a work in progress.
+I am 22 years old and I am currently enrolled in the Game Development program at St.Lawrence College.
+This website is a work in progress. As I continue with the program, I will update it.
 </pre>
 
     <br>
@@ -83,22 +83,22 @@ This website is a work in progress.
 <div class="personal">
     <br>
     <h2 id="hobbies" class="header">Hobbies</h2>
-    <ul>
-        <li>Reading</li>
-        <li>Playing videogames</li>
-        <li>Origami</li>
-    </ul>
+    <table style="margin: auto; font-size: large; color: rgb(113, 113, 242);"> 
+        <tr><td>Reading</td></tr>
+        <tr><td>Playing videogames</td></tr>
+        <tr><td>Origami</td></tr>
+    </table>
     
     <br>
     <h2 id="Games" class="header">Games I Play Often</h2>
-    <ol>
-        <li>Minecraft</li>
-        <li>DaggerFall</li>
-        <li>Half Life 2</li>
-        <li>Skyrim</li>
-        <li>Doom 2</li>
-        <li>Half Life</li>
-    </ol>
+    <table style="margin: auto; font-size: large; color: rgb(113, 113, 242);">
+        <tr><td>Minecraft</td></tr>
+        <tr><td>DaggerFall</td></tr>
+        <tr><td>Half Life 2</td></tr>
+        <tr><td>Skyrim<td></tr>
+        <tr><td>Doom 2</td></tr>
+        <tr><td>Half Life</td></tr>
+    </table>
 
     <br>
     <h2 id="john" class="header romero">John Romero</h2>
@@ -116,7 +116,7 @@ This website is a work in progress.
 
     <br>
     <h2 id="Sites" class="header">Sites That I Like</h2>
-    <dl>
+    <dl style="font-size: large;">
         <dt><a href="https://www.traditionalcatholic.co/free-catholicbooks/" target="_blank">traditionalcatholic.co</a></dt>
         <dd>- A website that lists old catholic books that are avaliable for free download.</dd>
         <dt><a href="http://textfiles.com/" target="_blank">textfiles.com</a></dt>

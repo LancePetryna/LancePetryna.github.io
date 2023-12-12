@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <title>Calculator 5</title>
+
+    <style>
+        body{
+            text-align: center;
+            background-color: lightblue;
+        }
+        p{
+            font-size: large;
+        }
+        table{
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+ </head>
+ 
+ <body>
+    <h1>Calculators</h1>
+    <h2>Calculator 5</h2>
+    <p>The following are 5 calculators that are from an assignement that I worked on for my Web Design course.</p>
+
+    <p>This is the fifth and last calculator where we had to give each number and operator its own button along with a clear button that cleared the input field, </p>
+    <p>To give a brief explanation as to how this calculator works, all to the number and operations butons are appended into the input field. After, the user can click on the equals button to calculate what ever is in the field. If the "clear" button is clicked, The input field is cleared.</p>
+
+    <table>
+        <tr>
+            <td> <input type="text" name="n1" style="width: 125px;" value="" id="expression"> </td>
+            <td style="text-align: center;"> <button type="button" name="button" onclick="reset()"> clear </button> </td>
+        </tr>
+        <tr>
+            <td style="text-align: center;"> 
+                <button type="button" style="width: 30px;" value="7" id="7" name="button" onclick="update(this)"> 7 </button> 
+                <button type="button" style="width: 30px;" value="8" id="8" name="button" onclick="update(this)"> 8 </button>
+                <button type="button" style="width: 30px;" value="9" id="9" name="button" onclick="update(this)"> 9 </button>
+                <button type="button" style="width: 30px;" value="/" id="div" name="button" onclick="update(this)"> / </button>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">
+                <button type="button" style="width: 30px;" value="4" id="4" name="button" onclick="update(this)"> 4 </button>
+                <button type="button" style="width: 30px;" value="5" id="5" name="button" onclick="update(this)"> 5 </button>
+                <button type="button" style="width: 30px;" value="6" id="6" name="button" onclick="update(this)"> 6 </button>
+                <button type="button" style="width: 30px;" value="*" id="mul" name="button" onclick="update(this)"> * </button>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">
+                <button type="button" style="width: 30px;" value="1" id="1" name="button" onclick="update(this)"> 1 </button>
+                <button type="button" style="width: 30px;" value="2" id="2" name="button" onclick="update(this)"> 2 </button>
+                <button type="button" style="width: 30px;" value="3" id="3" name="button" onclick="update(this)"> 3 </button>
+                <button type="button" style="width: 30px;" value="-" id="sub" name="button" onclick="update(this)"> - </button>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">
+                <button type="button" style="width: 30px;" value="0" id="0" name="button" onclick="update(this)"> 0 </button>
+                <button type="button" style="width: 30px;" value="." id="dot" name="button" onclick="update(this)"> . </button>
+                <button type="button" style="width: 30px;" value="=" id="equal" name="button" onclick="calculate()"> = </button>
+                <button type="button" style="width: 30px;" value="+" id="add" name="button" onclick="update(this)"> + </button>
+            </td>
+            <td></td>
+        </tr>
+    </table>
+
+    <p>by clicking on one of the buttons, you can switch between different calculators that were used on the assignement.</p>
+    <button type="button" name="button" id="calc1" onclick="location.href = 'calculator0.html';">calculator 0</button>
+    <button type="button" name="button" id="calc2" onclick="location.href = 'calculator1.html';">calculator 1</button>
+    <button type="button" name="button" id="calc3" onclick="location.href = 'calculator2.html';">calculator 2</button>
+    <button type="button" name="button" id="calc4" onclick="location.href = 'calculator3.html';">calculator 3</button>
+    <button type="button" name="button" id="calc5" onclick="location.href = 'calculator4.html';">calculator 4</button>
+    <br>
+
+    <p><a href="../index.html">Back to main page</a> | <a href="../portfolio.html">Back to portfolio</a></p>
+
+    <script>
+        function calculate() {
+            var exp = document.getElementById('expression').value;
+            var res = Function("return "+exp) () ;
+
+            document.getElementById('expression').value = res;
+        }
+        function reset() {
+            document.getElementById('expression').value = ''
+        }
+        function update(objectId) {
+            var num = objectId.value;
+            
+            document.getElementById('expression').value += num;
+        }
+    </script>
+ </body>
+
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <title>Calculator 2</title>
+
+    <style>
+        body{
+            text-align: center;
+            background-color: lightblue;
+        }
+        p{
+            font-size: large;
+        }
+        table{
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+ </head>
+ 
+ <body>
+    <h1>Calculators</h1>
+    <h2>Calculator 2</h2>
+    <p>The following are 5 calculators that are from an assignement that I worked on for my Web Design course.</p>
+
+    <p>This is the second calculator where we had to give it additional buttons to do subtraction, multipication, and division.</p>
+    <p>This was done by giving each button its own fuction to do the calculation based on its operator type.</p>
+
+    <table>
+        <tr>
+            <td>1st Number: </td>
+            <td> <input type="text" name="n1" value="" id="n1"> </td>
+        </tr>
+        <tr>
+            <td>2nd Number: </td>
+            <td><input type="text" name="n2" value="" id="n2"></td>
+        </tr>
+        <tr>
+            <td>Result: </td>
+            <td><input type="text" name="res" value="" disabled id="res"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td style="text-align: center;"> <button type="button" name="button" onclick="add()"> + </button>
+                 <button type="button" name="button" onclick="subtract()"> - </button>
+                 <button type="button" name="button" onclick="multiply()"> * </button>
+                 <button type="button" name="button" onclick="divide()"> / </button> </td>
+        </tr>
+    </table>
+
+    <p>by clicking on one of the buttons, you can switch between different calculators that were used on the assignement.</p>
+    <button type="button" name="button" id="calc1" onclick="location.href = 'calculator0.html';">calculator 0</button>
+    <button type="button" name="button" id="calc2" onclick="location.href = 'calculator1.html';">calculator 1</button>
+    <button type="button" name="button" id="calc3" onclick="location.href = 'calculator3.html';">calculator 3</button>
+    <button type="button" name="button" id="calc4" onclick="location.href = 'calculator4.html';">calculator 4</button>
+    <button type="button" name="button" id="calc5" onclick="location.href = 'calculator5.html';">calculator 5</button>
+    <br>
+
+    <p><a href="../index.html">Back to main page</a> | <a href="../portfolio.html">Back to portfolio</a></p>
+
+    <script>
+        function add() {
+            var n1 = document.getElementById('n1').value;
+            var n2 = document.getElementById('n2').value;
+            var res = parseFloat(n1) + parseFloat(n2);
+            document.getElementById('res').value = res;
+        }
+        function subtract() {
+            var n1 = document.getElementById('n1').value;
+            var n2 = document.getElementById('n2').value;
+            var res = parseFloat(n1) - parseFloat(n2);
+            document.getElementById('res').value = res;
+        }
+        function multiply() {
+            var n1 = document.getElementById('n1').value;
+            var n2 = document.getElementById('n2').value;
+            var res = parseFloat(n1) * parseFloat(n2);
+            document.getElementById('res').value = res;
+        }
+        function divide() {
+            var n1 = document.getElementById('n1').value;
+            var n2 = document.getElementById('n2').value;
+            var res = parseFloat(n1) / parseFloat(n2);
+            document.getElementById('res').value = res;
+        }
+    </script>
+ </body>
+
+</html>

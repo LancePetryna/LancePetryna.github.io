@@ -1,5 +1,5 @@
 p, pre, blockquote, dd {
-    color: rgb(59, 176, 205);
+    color: white;
     font-family: sans-serif;
     font-size: medium;
 }
@@ -20,6 +20,7 @@ hr {
     font-size: large;
     width: 25%;
     height: 200px;
+    background-color: white;
 }
 
 .romero {

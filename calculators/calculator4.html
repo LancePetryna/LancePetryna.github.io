@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <title>Calculator 4</title>
+
+    <style>
+        body{
+            text-align: center;
+            background-color: lightblue;
+        }
+        p{
+            font-size: large;
+        }
+        table{
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+ </head>
+
+ <body>
+    <h1>Calculators</h1>
+    <h2>Calculator 4</h2>
+    <p>The following are 5 calculators that are from an assignement that I worked on for my Web Design course.</p>
+
+    <p>This is the fourth table where we had to give it only one button to do the calculation.</p>
+    <p>This was done by using the following: Function("return "+exp) () ;</p>
+
+    <table>
+        <tr>
+            <td>Enter Expression: </td>
+            <td> <input type="text" name="n1" value="" id="expression"> </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td style="text-align: center;"> <button type="button" name="button" onclick="calculate()"> Evaluate </button> </td>
+        </tr>
+    </table>
+
+    <p>by clicking on one of the buttons, you can switch between different calculators that were used on the assignement.</p>
+    <button type="button" name="button" id="calc1" onclick="location.href = 'calculator0.html';">calculator 0</button>
+    <button type="button" name="button" id="calc2" onclick="location.href = 'calculator1.html';">calculator 1</button>
+    <button type="button" name="button" id="calc3" onclick="location.href = 'calculator2.html';">calculator 2</button>
+    <button type="button" name="button" id="calc4" onclick="location.href = 'calculator3.html';">calculator 3</button>
+    <button type="button" name="button" id="calc5" onclick="location.href = 'calculator5.html';">calculator 5</button>
+    <br>
+
+    <p><a href="../index.html">Back to main page</a> | <a href="../portfolio.html">Back to portfolio</a></p>
+
+    <script>
+        function calculate() {
+            var exp = document.getElementById('expression').value;
+            var res = Function("return "+exp) () ;
+
+            document.getElementById('expression').value = res;
+        }
+    </script>
+ </body>
+
+</html>
